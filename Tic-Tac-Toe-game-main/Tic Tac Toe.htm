@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="Tic%20Tac%20Toe_files/style.css">
+</head>
+<body>
+  <nav>               <!---  we will use nav bar -->
+    <ul>
+        <li> Mytictactoe.com</li>        <!----suppose if i want to launch this in website--->
+    </ul>
+  </nav>  
+  <div class="gamecontainer">
+    <div class="line"></div>
+    <div class="container">
+        <div class="box bt-0 bl-0"><span class="boxtext"></span></div>                  <!---used for X or 0-->
+        <div class="box  bt-0"><span class="boxtext"></span></div> 
+        <div class="box bt-0 br-0"><span class="boxtext"></span></div> 
+        <div class="box bl-0"><span class="boxtext"></span></div> 
+        <div class="box"><span class="boxtext">0</span></div> 
+        <div class="box br-0"><span class="boxtext">X</span></div> 
+        <div class="box bl-0 bb-0"><span class="boxtext"></span></div> 
+        <div class="box bb-0"><span class="boxtext"></span></div> 
+        <div class="box bb-0 br-0"><span class="boxtext"></span></div> 
+  </div>
+  <div class="gameInfo"><h1>Welcome to Tic Tac Toe Game</h1>
+<div> 
+    <span class="info">Turn for X</span>                     <!----info of whose turn and game over -->
+    <button id="reset">Reset</button>  
+</div>         
+<div class="imgbox">
+    <img src="Tic%20Tac%20Toe_files/dance.gif" alt="">
+</div>                
+  </div>
+  <script src="Tic%20Tac%20Toe_files/script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</div></body></html>
